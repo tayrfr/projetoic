@@ -8,15 +8,15 @@
 }
 
 .key {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border: 1px solid black;
   margin: 2px;
   padding: 0;
 }
 
 #textbox {
-  width: 800px;
+  width: 1500px;
   height: 100px;
   border: 1px solid black;
   font-size: 40px;
@@ -36,7 +36,7 @@
 }
 
 .suggestion-button {
-  margin: 5px;
-  padding: 5px;
+  margin: 1500px;
+  padding: 100px;
 }
 
