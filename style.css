@@ -1,1 +1,42 @@
+#keyboard {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.keyrow {
+  display: flex;
+}
+
+.key {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 2px;
+  padding: 0;
+}
+
+#textbox {
+  width: 800px;
+  height: 100px;
+  border: 1px solid black;
+  font-size: 40px;
+}
+#space {
+  margin-left: 35px;
+  text: "Space";
+  width: 300px;
+  height: 30px;
+  
+}
+#suggestion-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50px;
+  height: 30px;
+}
+
+.suggestion-button {
+  margin: 5px;
+  padding: 5px;
+}
 
