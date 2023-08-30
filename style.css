@@ -13,13 +13,13 @@
 }
 
 .key {
-  width: 117px;
-  height: 118px;
-  border: solid black;
+  width: 120px;
+  height: 100px;
+  border: 1px solid black;
   margin: 5px;
   padding: 0;
   font-size: 25px; 
-  border-radius: 30px;
+  border-radius: 15px;
 }
 
 #textbox {
