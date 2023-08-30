@@ -21,11 +21,7 @@
   border: 1px solid black;
   font-size: 40px;
 }
-#space {
-  width: 117px;
-  height: 118px;
-  
-}
+
 #suggestion-row {
   display: flex;
   flex-wrap: wrap;
