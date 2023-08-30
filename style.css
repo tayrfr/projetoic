@@ -1,3 +1,6 @@
+body {
+  justify-content: center;
+}
 #keyboard {
   display: flex;
   flex-wrap: wrap;
