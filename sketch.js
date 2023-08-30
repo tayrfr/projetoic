@@ -25,7 +25,7 @@ function setup() {
       currentKey = event.target;
     } else if (currentKey) {
       selectKey(currentKey);
-      currentKey = null;
+     // currentKey = null;
       
     //  } else if (currentKey == document.getElementById("speak-button"))
       //  {
