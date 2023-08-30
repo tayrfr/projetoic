@@ -23,6 +23,7 @@
 }
 
 #textbox {
+  cursor: text;
   width: 1350px;
   height: 100px;
   border: none;
