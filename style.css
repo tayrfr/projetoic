@@ -6,6 +6,7 @@
 
 .keyrow {
   display: flex;
+  border-radius: 10px;
 }
 
 .key {
@@ -14,7 +15,6 @@
   border: 1px solid black;
   margin: 2px;
   padding: 0;
-  border-radius: 10px;
 }
 
 #textbox {
