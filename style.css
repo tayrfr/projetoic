@@ -7,14 +7,14 @@
 .keyrow {
   display: flex;
   flex-wrap: wrap;
-  margin: 10px;
+  margin: 15px;
 }
 
 .key {
   width: 135px;
   height: 80px;
   border: 1px solid blue;
-  margin: 10px;
+  margin: 5px;
   padding: 0;
   font-size: 25px; 
   border-radius: 15px;
