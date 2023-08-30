@@ -5,7 +5,8 @@
 
 .keyrow {
   display: flex;
-  align: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .key {
