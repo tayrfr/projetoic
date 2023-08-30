@@ -30,7 +30,7 @@ function setup() {
    //   } else if (currentKey == document.getElementById("speak-button"))
     //    {
           speakButton.click();
-     //   } // bloco criado pra ver se a ideia iria funcionar
+        } // bloco criado pra ver se a ideia vai funcionar
   });
 
   // Evento para percorrer o teclado automaticamente
