@@ -1,4 +1,4 @@
-function setup() {
+async function setup() {
   const keyboard = document.getElementById("keyboard");
   var textbox = document.getElementById("textbox");
   const backspace = document.getElementById("backspace");
@@ -6,6 +6,14 @@ function setup() {
   const synth = window.speechSynthesis;
   let speakButton = document.getElementById("speak-button");
 
+
+  const affPath = 'https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/pt/index.aff';
+  const dicPath = 'https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/pt/index.dic';
+
+  let dictionary;
+  const affData = await fetch(affPath).then(response => response.text())
+  const dicData = await fetch(dicPath).then(response => response.text())    
+  dictionary = new Typo('pt_BR', affData, dicData);
   let currentKey = null; // Armazena a chave atualmente selecionada
 
   // Função para selecionar uma letra do teclado
@@ -27,9 +35,15 @@ function setup() {
       selectKey(currentKey);
       currentKey = null;
       
+      const lastWord = textbox.value.split(" ").at(-1).trim()
+      
+      speakButton.click();
+      if (lastWord === "") return
+      const suggestions = dictionary.suggest(textbox.value)
+      console.log(suggestions)
+
     //  } else if (currentKey == document.getElementById("speak-button"))
       //  {
-          speakButton.click();
         } // bloco criado pra ver se a ideia iria funcionar
   });
 
