@@ -23,7 +23,7 @@ function setup() {
   document.addEventListener("click", function(event) {
     if (event.target.classList.contains("key")) {
       currentKey = event.target;
-   // } else if (currentKey) {
+    } else if (currentKey) {
       selectKey(currentKey);
       currentKey = null;
       
