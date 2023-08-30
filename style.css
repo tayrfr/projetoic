@@ -4,7 +4,6 @@
 }
 .keyrow {
   display: flex;
-  justify-content: center;
 }
 .key {
   width: 40px;
