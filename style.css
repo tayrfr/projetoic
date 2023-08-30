@@ -17,15 +17,12 @@
   padding: 0;
 }
 
-.button {
-  border-radius: 10px;
-}
-
 #textbox {
   width: 1350px;
   height: 100px;
   border: 1px solid black;
   font-size: 40px;
+  justify-content: center;
 }
 
 #suggestion-row {
