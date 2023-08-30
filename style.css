@@ -1,13 +1,11 @@
-body {
-  justify-content: center;
-}
+
 #keyboard {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
 }
 
 .keyrow {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   justify-content: center;
 }
