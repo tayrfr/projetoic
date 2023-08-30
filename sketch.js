@@ -23,14 +23,14 @@ function setup() {
   document.addEventListener("click", function(event) {
     if (event.target.classList.contains("key")) {
       currentKey = event.target;
-   // } else if (currentKey) {
+    } else if (currentKey) {
       selectKey(currentKey);
       currentKey = null;
       
-   //   } else if (currentKey == document.getElementById("speak-button"))
-    //    {
+    //  } else if (currentKey == document.getElementById("speak-button"))
+      //  {
           speakButton.click();
-        } // bloco criado pra ver se a ideia vai funcionar
+        } // bloco criado pra ver se a ideia iria funcionar
   });
 
   // Evento para percorrer o teclado automaticamente
