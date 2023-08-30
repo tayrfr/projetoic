@@ -6,7 +6,10 @@
 .keyrow {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+}
+
+.container {
+  justify-content: center;  
 }
 
 .key {
