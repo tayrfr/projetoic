@@ -1,5 +1,6 @@
 #keyboard {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .keyrow {
