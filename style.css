@@ -17,6 +17,8 @@
   padding: 0;
   font-size: 25px; 
   border-radius: 15px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 255, 0.2);
+  color: #E0FFFF;
 }
 
 #textbox {
@@ -25,8 +27,4 @@
   border: 1px solid black;
   font-size: 40px;
   justify-content: center;
-}
-
-#keyrow1 {
-  color: #F0E68C;
 }
