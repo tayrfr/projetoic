@@ -1,7 +1,5 @@
 #keyboard {
   display: flex;
-  flex-wrap: wrap;
-  align: center;
 }
 
 .keyrow {
@@ -22,16 +20,4 @@
   height: 100px;
   border: 1px solid black;
   font-size: 40px;
-}
-
-#suggestion-row {
-  display: flex;
-  flex-wrap: wrap;
-  width: 50px;
-  height: 30px;
-}
-
-.suggestion-button {
-  margin: 1500px;
-  padding: 100px;
 }
