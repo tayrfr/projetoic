@@ -1,13 +1,17 @@
 #keyboard {
   display: flex;
   flex-wrap: wrap;
+  align: center;
 }
+
 .keyrow {
   display: flex;
+  border-radius: 10px;
 }
+
 .key {
-  width: 40px;
-  height: 40px;
+  width: 117px;
+  height: 118px;
   border: 1px solid black;
   margin: 2px;
   padding: 0;
@@ -19,12 +23,14 @@
   border: 1px solid black;
   font-size: 40px;
 }
+
 #suggestion-row {
   display: flex;
   flex-wrap: wrap;
   width: 50px;
   height: 30px;
 }
+
 .suggestion-button {
   margin: 1500px;
   padding: 100px;
