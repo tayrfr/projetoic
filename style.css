@@ -25,10 +25,10 @@
   cursor: text;
   width: 1350px;
   height: 100px;
-  border: 1px solid blue;
+  border: 1px solid black;
   border-radius: 5px;
   box-shadow: 4px 4px 4px rgba(0, 0, 255, 0.2);
   font-size: 50px;
   justify-content: center;
-  backgroud-color: #D3D3D3;
+  color: #D3D3D3;
 }
