@@ -8,10 +8,6 @@
   flex-wrap: wrap;
 }
 
-.container {
-  justify-content: center;  
-}
-
 .key {
   width: 120px;
   height: 100px;
