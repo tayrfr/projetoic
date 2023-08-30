@@ -27,10 +27,10 @@ function setup() {
       selectKey(currentKey);
       currentKey = null;
       
-      } else if (currentKey == document.getElementById("speak-button"))
-        {
-          speakButton.click();
-        } // bloco criado pra ver se a ideia iria funcionar
+   //   } else if (currentKey == document.getElementById("speak-button"))
+    //    {
+     //     speakButton.click();
+     //   } // bloco criado pra ver se a ideia iria funcionar
   });
 
   // Evento para percorrer o teclado automaticamente
