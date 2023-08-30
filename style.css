@@ -14,7 +14,7 @@
   width: 135px;
   height: 80px;
   border: 1px solid blue;
-  margin: 5px;
+  margin: 10px;
   padding: 0;
   font-size: 25px; 
   border-radius: 15px;
@@ -25,7 +25,7 @@
 #textbox {
   width: 1350px;
   height: 100px;
-  border: 1px solid black;
-  font-size: 40px;
+  border: none;
+  font-size: 50px;
   justify-content: center;
 }
