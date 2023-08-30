@@ -6,12 +6,12 @@
 .keyrow {
   display: flex;
   flex-wrap: wrap;
-  margin: 5px;
+  margin: 10px;
 }
 
 .key {
   width: 140px;
-  height: 100px;
+  height: 80px;
   border: 1px solid blue;
   margin: 5px;
   padding: 0;
