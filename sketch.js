@@ -29,7 +29,7 @@ function setup() {
       
    //   } else if (currentKey == document.getElementById("speak-button"))
     //    {
-     //     speakButton.click();
+          speakButton.click();
      //   } // bloco criado pra ver se a ideia iria funcionar
   });
 
