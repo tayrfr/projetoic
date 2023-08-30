@@ -69,3 +69,4 @@ function setup() {
     speech.pitch = 1;
     synth.speak(speech);
   });
+}
