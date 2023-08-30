@@ -1,71 +1,72 @@
 function setup() {
-const keyboard = document.getElementById("keyboard");
-const textbox = document.getElementById("textbox");
-const backspace = document.getElementById("backspace");
-const deleteAll = document.getElementById("delete-all");
+  const keyboard = document.getElementById("keyboard");
+  var textbox = document.getElementById("textbox");
+  const backspace = document.getElementById("backspace");
+  const deleteAll = document.getElementById("delete-all");
+  const synth = window.speechSynthesis;
+  let speakButton = document.getElementById("speak-button");
 
-keyboard.addEventListener("click", function(event) {
-  if (event.target.classList.contains("key")) {
-    if (event.target === deleteAll) {
+  let currentKey = null; // Armazena a chave atualmente selecionada
+
+  // Função para selecionar uma letra do teclado
+  function selectKey(key) {
+    if (key === deleteAll) {
       textbox.value = "";
-    }
-    if (event.target === backspace) {
+    } else if (key === backspace) {
       textbox.value = textbox.value.substring(0, textbox.value.length - 1);
     } else {
-      textbox.value += event.target.textContent;
+      textbox.value += key.textContent;
     }
   }
-});
 
-const synth = window.speechSynthesis;
-let speakButton = document.getElementById("speak-button");
+  // Evento para lidar com o clique em qualquer lugar do documento
+  document.addEventListener("click", function(event) {
+    if (event.target.classList.contains("key")) {
+      currentKey = event.target;
+    } else if (currentKey) {
+      selectKey(currentKey);
+      currentKey = null;
+      
+      } else if (currentKey == document.getElementById("speak-button"))
+        {
+          speakButton.click();
+        } // bloco criado pra ver se a ideia iria funcionar
+  });
 
-speakButton.addEventListener("click", function() 
-{
-  let textToSpeak = textbox.value;
-  if (!textToSpeak) return;
-  let speech = new SpeechSynthesisUtterance(textToSpeak);
-  let voices = synth.getVoices();
-  let selectedVoice = voices.find(voice => voice.name === "Google português do Brasil");
-speech.voice = selectedVoice;
-  speech.rate = 0.8;
-  speech.pitch = 1;
-  synth.speak(speech);
-});
-  
+  // Evento para percorrer o teclado automaticamente
+  let keys = keyboard.getElementsByClassName("key");
+  let currentIndex = 0;
 
-const suggestionRow = document.getElementById("suggestion-row");
+  function autoScan() {
+    currentKey = keys[currentIndex];
+    currentKey.focus();
+    currentIndex = (currentIndex + 1) % keys.length;
+  }
 
-textbox.addEventListener("keyup", function() {
-  let currentWord = textbox.value.split(" ").slice(-1)[0];
+  setInterval(autoScan, 1000); // A cada segundo, o foco será movido para a próxima chave
 
-  const options = {
-  method: 'GET',
-  url: 'https://omrivolk-autocomplete-v1.p.rapidapi.com/complete',
-  params: {s: 'un'},
-  headers: {
-    'X-RapidAPI-Key': 'c26a30855bmshf1a2561254023a8p112d8ajsnc50a244ff6c8',
-    'X-RapidAPI-Host': 'omrivolk-autocomplete-v1.p.rapidapi.com'
-  }}
-  // Use the currentWord to make an API call to a word suggestion service
-  // and retrieve suggestions
-  axios.get(`https://omrivolk-autocomplete-v1.p.rapidapi.com/complete`)
-    .then(response => {
-      // Clear previous suggestions
-      suggestionRow.innerHTML = "";
+  // Evento para lidar com o botão de backspace
+  backspace.addEventListener("click", function() {
+    textbox.value = textbox.value.substring(0, textbox.value.length - 1);
+  });
 
-      // Add new suggestions as buttons
-      response.data.suggestions.forEach(suggestion => {
-        let button = document.createElement("button");
-        button.innerHTML = suggestion;
-        button.classList.add("suggestion-button");
-        button.addEventListener("click", function() {
-          textbox.value += suggestion + " ";
-        });
-        suggestionRow.appendChild(button);
-      });
-    });
-});
+  // Evento para lidar com o botão de delete-all
+  deleteAll.addEventListener("click", function() {
+    textbox.value = "";
+  });
 
-
+  // Evento para lidar com o botão de speak
+    speakButton.addEventListener("click", function() {
+    let textToSpeak = textbox.value;
+    if (!textToSpeak) return;
+    let speech = new SpeechSynthesisUtterance(textToSpeak);
+    let voices = synth.getVoices();
+    let selectedVoice = voices.find(
+      (voice) => voice.name === "Google português do Brasil"
+    );
+    speech.voice = selectedVoice;
+    speech.rate = 0.8;
+    speech.pitch = 1;
+    synth.speak(speech);
+  });
 }
