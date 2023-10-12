@@ -5,8 +5,7 @@ function setup() {
   const deleteAll = document.getElementById("delete-all");
   const synth = window.speechSynthesis;
   let speakButton = document.getElementById("speak-button");
-
-  let currentKey = null; // Armazena a chave atualmente selecionada
+  let currentKey = null;
 
   // Função para selecionar uma letra do teclado
   function selectKey(key) {
@@ -14,7 +13,10 @@ function setup() {
       textbox.value = "";
     } else if (key === backspace) {
       textbox.value = textbox.value.substring(0, textbox.value.length - 1);
-    } else {
+    } else if (key === speakButton) {
+      speakButton.click();
+    }    
+    else {
       textbox.value += key.textContent;
     }
   }
@@ -26,11 +28,6 @@ function setup() {
     } else if (currentKey) {
       selectKey(currentKey);
       currentKey = null;
-      
-    //  } else if (currentKey == document.getElementById("speak-button"))
-      //  {
-          speakButton.click();
-        } // bloco criado pra ver se a ideia iria funcionar
   });
 
   // Evento para percorrer o teclado automaticamente
