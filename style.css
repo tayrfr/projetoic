@@ -13,12 +13,12 @@
 .keyrow {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px;
+  margin: 15px;
 }
 
 .key {
   width: 135px;
-  height: 80px;
+  height: 90px;
   border: 1px solid blue;
   margin: 5px;
   padding: 0;
