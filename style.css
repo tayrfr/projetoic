@@ -1,4 +1,5 @@
 .key:focus {
+  border: 10px;
   backrground-color: lightblue;
 }
 #keyboard {
