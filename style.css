@@ -9,13 +9,14 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
+  margin: 10px;
 }
 
 .key {
-  width: 135px;
+  width: 140px;
   height: 80px;
   border: 1px solid blue;
-  margin: 10px;
+  margin: 8px;
   
   font-size: 25px; 
   border-radius: 25px;
