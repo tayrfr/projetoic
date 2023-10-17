@@ -1,5 +1,5 @@
 .key:focus {
-  border: 15px;
+  outline: 15px;
 }
 #keyboard {
   display: flex;
