@@ -1,3 +1,6 @@
+.key:focus {
+  border: 10px;
+}
 #keyboard {
   display: flex;
   /*flex-wrap: wrap;*/
@@ -9,7 +12,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .key {
