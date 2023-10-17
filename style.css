@@ -6,7 +6,8 @@
 
 .keyrow {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .key {
@@ -14,7 +15,7 @@
   height: 80px;
   border: 1px solid blue;
   margin: 15px;
-  padding: 0;
+  
   font-size: 25px; 
   border-radius: 25px;
   box-shadow: 4px 4px 4px rgba(0, 0, 255, 0.2);
