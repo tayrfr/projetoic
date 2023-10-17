@@ -9,11 +9,11 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  margin: 10px;
+  margin-bottom: 10px;
 }
 
 .key {
-  width: 140px;
+  width: 135px;
   height: 80px;
   border: 1px solid blue;
   margin: 8px;
