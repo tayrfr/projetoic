@@ -1,6 +1,6 @@
 button.key:focus {
   border: 10px;
-  backrground-color: lightblue;
+  background-color: lightblue;
 }
 #keyboard {
   display: flex;
